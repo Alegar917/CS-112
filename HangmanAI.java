@@ -1,4 +1,4 @@
- public class HangmanAI1 extends Hangman{
+ public class HangmanAI extends Hangman{
  	HangmanPlayer player=new HangmanPlayer();
  	int i;
  	public String getPhrase(){
@@ -14,7 +14,7 @@
 		return "playerAi";
 	}
 	public static void main(String[] args){
-		HangmanAI1 hang=new HangmanAI1();
+		HangmanAI hang=new HangmanAI();
 		GamesRecord rec=new GamesRecord();
 		hang.readPhrases();
 		String p=hang.getPhrase();
@@ -24,7 +24,7 @@
 		while(i<hang.phraseList.size()){
 			hang.i=i;
 			p=hang.getPhrase();
-			hang=new HangmanAI1();
+			hang=new HangmanAI();
 			hang.player=new HangmanPlayer();
 			hang.readPhrases();
 			hang.play(p);
